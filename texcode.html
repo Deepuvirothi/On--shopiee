@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnShop - Online Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            background-color: #2C3E50;
+            color: white;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 48px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: #27AE60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2ecc71;
+        }
+        
+        .product-list {
+            display: none;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product h2 {
+            font-size: 24px;
+            color: #2C3E50;
+            margin: 15px 0;
+        }
+        .product p {
+            font-size: 18px;
+            color: #7F8C8D;
+        }
+        .price {
+            font-size: 22px;
+            color: #27AE60;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn-add-to-cart {
+            background-color: #E67E22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-add-to-cart:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to OnShop</h1>
+    </div>
+
+    <div class="button-container">
+        <marquee direction="right"><i>Get upto 50% off</i> </marquee>
+        <button class="btn" id="showProductsBtn">Click Here</button>
+    </div>
+
+    <div class="product-list" id="productList">
+        <div class="product">
+            <img src="C:\Users\Msuni\Pictures\shopping.webp" alt="Shirt">
+            <h2>Shirt</h2>
+            <p>Stylish and comfortable shirt for all occasions.</p>
+            <p class="price">₹300</p>
+            <button class="btn-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Msuni\Pictures\shopping (1).webp" alt="Pant">
+            <h2>Pant</h2>
+            <p>Perfectly fitted pant with a sleek design.</p>
+            <p class="price">₹600</p>
+            <button class="btn-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Msuni\Pictures\RSO3634_1.webp" alt="Shoes">
+            <h2>Shoe</h2>
+            <p>Comfortable shoes to walk in style.</p>
+            <p class="price">₹900</p>
+            <button class="btn-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showProductsBtn").addEventListener("click", function() {
+            document.getElementById("productList").style.display = "flex";
+            document.getElementById("showProductsBtn").style.display = "none";
+        });
+    </script>
+</body>
+</html>
